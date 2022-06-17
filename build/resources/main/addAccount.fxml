@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="420.0" prefWidth="520.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="it.unicam.cs.pa.jbudget105371.View.AddAccountControllerFX">
+    <Label alignment="CENTER" contentDisplay="CENTER" layoutY="20.0" text="Add Account" textAlignment="CENTER" textFill="#f89100" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="100.0">
+        <font>
+            <Font name="Rockwell Nova" size="41.0" />
+        </font>
+    </Label>
+    <Label layoutX="140.0" layoutY="114.0" text="Name :" textFill="#f89100" AnchorPane.leftAnchor="80.0">
+        <font>
+            <Font name="Rockwell Nova Light" size="17.0" />
+        </font>
+    </Label>
+    <TextField fx:id="nameTxF" layoutX="320.0" layoutY="113.0" promptText="Max 16 char..." AnchorPane.rightAnchor="80.0" />
+    <Label layoutX="140.0" layoutY="149.0" text="Description :" textFill="#f89100" AnchorPane.leftAnchor="80.0">
+        <font>
+            <Font name="Rockwell Nova Light" size="17.0" />
+        </font>
+    </Label>
+    <TextArea fx:id="descriptionTxA" layoutX="320.0" layoutY="149.0" prefHeight="80.0" prefWidth="149.0" promptText="Max 25 char..." wrapText="true" AnchorPane.rightAnchor="80.0" />
+    <Label layoutX="140.0" layoutY="249.0" text="Type :" textFill="#f89100" AnchorPane.leftAnchor="80.0">
+        <font>
+            <Font name="Rockwell Nova Light" size="17.0" />
+        </font>
+    </Label>
+    <ComboBox fx:id="typeCBox" layoutX="320.0" layoutY="248.0" prefWidth="150.0" promptText="Account's Type" AnchorPane.rightAnchor="80.0" />
+    <Label layoutX="140.0" layoutY="293.0" text="Opening Balance :" textFill="#f89100" AnchorPane.leftAnchor="80.0">
+        <font>
+            <Font name="Rockwell Nova Light" size="17.0" />
+        </font>
+    </Label>
+    <TextField fx:id="openingBalanceTxF" layoutX="320.0" layoutY="292.0" promptText="Balance &gt;= 1" AnchorPane.rightAnchor="80.0" />
+    <Button fx:id="cancelBtn" layoutX="220.0" layoutY="345.0" mnemonicParsing="false" onAction="#handleCancelBtn" style="-fx-background-color: #f89100;" text="Cancel" textFill="WHITE" AnchorPane.leftAnchor="170.0">
+        <font>
+            <Font size="15.0" />
+        </font>
+    </Button>
+    <Button layoutX="357.0" layoutY="345.0" mnemonicParsing="false" onAction="#handleAddBtn" prefHeight="31.0" prefWidth="64.0" style="-fx-background-color: #f89100;" text="Add" textFill="WHITE" AnchorPane.rightAnchor="170.0">
+        <font>
+            <Font size="15.0" />
+        </font>
+    </Button>
+    <Label fx:id="errorLbl" alignment="CENTER" layoutX="211.0" layoutY="384.0" prefHeight="11.0" prefWidth="215.0" text="Errore descrizione(Max 20)" textFill="#ff1313" visible="false" />
+</AnchorPane>

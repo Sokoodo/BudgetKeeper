@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="420.0" prefWidth="520.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="it.unicam.cs.pa.jbudget105371.View.AddTransactionControllerFX">
+    <AnchorPane fx:id="transactionPane" prefHeight="420.0" prefWidth="520.0">
+        <Label alignment="CENTER" contentDisplay="CENTER" text="Add Transaction" textAlignment="CENTER" textFill="#f89100" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="30.0">
+            <font>
+                <Font name="Rockwell Nova" size="41.0" />
+            </font>
+        </Label>
+        <Label layoutX="10.0" layoutY="94.0" text="Date :" textFill="#f89100" AnchorPane.leftAnchor="110.0" AnchorPane.topAnchor="105.0">
+            <font>
+                <Font name="Rockwell Nova Light" size="17.0" />
+            </font>
+        </Label>
+        <DatePicker fx:id="datePick" editable="false" layoutX="221.0" layoutY="93.0" prefHeight="25.0" prefWidth="149.0" promptText="Date" AnchorPane.rightAnchor="110.0" AnchorPane.topAnchor="105.0" />
+        <Label layoutX="9.0" layoutY="139.0" text="Tags :" textFill="#f89100" AnchorPane.leftAnchor="110.0" AnchorPane.topAnchor="148.0">
+            <font>
+                <Font name="Rockwell Nova Light" size="17.0" />
+            </font>
+        </Label>
+        <TextArea fx:id="tagsTransactionTxA" layoutX="221.0" layoutY="139.0" prefHeight="80.0" prefWidth="149.0" promptText="Tags, separed by          comma" wrapText="true" AnchorPane.rightAnchor="110.0" AnchorPane.topAnchor="148.0" />
+        <Label layoutX="10.0" layoutY="241.0" text="Movements :" textFill="#f89100" AnchorPane.leftAnchor="110.0" AnchorPane.topAnchor="245.0">
+            <font>
+                <Font name="Rockwell Nova Light" size="17.0" />
+            </font>
+        </Label>
+        <Button fx:id="addMovementBtn" layoutX="221.0" layoutY="240.0" mnemonicParsing="false" onAction="#handleMovementsCreation" prefHeight="25.0" prefWidth="149.0" text="Add Movements" textFill="#2c2c2c" AnchorPane.rightAnchor="110.0" AnchorPane.topAnchor="245.0" />
+        <Label layoutX="110.0" layoutY="294.0" text="N°.Movements :" textFill="#f89100" AnchorPane.topAnchor="282.0">
+            <font>
+                <Font name="Rockwell Nova Light" size="17.0" />
+            </font>
+        </Label>
+        <Label fx:id="nMovementsLbl" alignment="CENTER" layoutX="297.0" layoutY="282.0" prefHeight="23.0" prefWidth="77.0" text="0" textFill="#f89100">
+            <font>
+                <Font name="Rockwell Nova Light" size="17.0" />
+            </font>
+        </Label>
+        <Button fx:id="cancelBtn" mnemonicParsing="false" onAction="#handleCancelBtn" style="-fx-background-color: #f89100;" text="Cancel" textFill="WHITE" AnchorPane.bottomAnchor="51.0" AnchorPane.leftAnchor="150.0">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </Button>
+        <Button fx:id="addBtn" mnemonicParsing="false" onAction="#handleAddBtn" prefHeight="31.0" prefWidth="64.0" style="-fx-background-color: #f89100;" text="Add" textFill="WHITE" AnchorPane.bottomAnchor="51.0" AnchorPane.rightAnchor="150.0">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </Button>
+        <Label fx:id="errorLbl" alignment="CENTER" prefHeight="17.0" prefWidth="235.0" text="Errore descrizione(Max 20)" textFill="#ff1313" visible="false" AnchorPane.bottomAnchor="28.0" AnchorPane.rightAnchor="65.0" />
+
+    </AnchorPane>
+    <AnchorPane fx:id="movementPane" prefHeight="420.0" prefWidth="520.0" visible="false">
+        <Label alignment="CENTER" contentDisplay="CENTER" layoutY="20.0" text="Add Movements" textAlignment="CENTER" textFill="#f89100" AnchorPane.leftAnchor="70.0" AnchorPane.rightAnchor="70.0">
+            <font>
+                <Font name="Rockwell Nova" size="41.0" />
+            </font>
+        </Label>
+        <Label layoutX="79.0" layoutY="102.0" text="Type :" textFill="#f89100" AnchorPane.leftAnchor="80.0">
+            <font>
+                <Font name="Rockwell Nova Light" size="17.0" />
+            </font>
+        </Label>
+        <ComboBox fx:id="typeCBox" layoutX="291.0" layoutY="102.0" prefHeight="25.0" prefWidth="149.0" promptText="Movement's Type" AnchorPane.rightAnchor="80.0" />
+        <Label layoutX="80.0" layoutY="139.0" text="Tags :" textFill="#f89100" AnchorPane.leftAnchor="80.0">
+            <font>
+                <Font name="Rockwell Nova Light" size="17.0" />
+            </font>
+        </Label>
+        <TextArea fx:id="tagsMovementTxA" layoutX="291.0" layoutY="138.0" prefHeight="41.0" prefWidth="149.0" promptText="Tags, separed by            comma" wrapText="true" AnchorPane.rightAnchor="80.0" />
+        <Label layoutX="81.0" layoutY="190.0" text="Description :" textFill="#f89100" AnchorPane.leftAnchor="80.0">
+            <font>
+                <Font name="Rockwell Nova Light" size="17.0" />
+            </font>
+        </Label>
+        <TextArea fx:id="descriptionTxA" layoutX="291.0" layoutY="190.0" prefHeight="41.0" prefWidth="149.0" promptText="Description" wrapText="true" AnchorPane.rightAnchor="80.0" />
+        <Label layoutX="81.0" layoutY="244.0" text="Account :" textFill="#f89100" AnchorPane.leftAnchor="80.0">
+            <font>
+                <Font name="Rockwell Nova Light" size="17.0" />
+            </font>
+        </Label>
+        <ComboBox fx:id="accountCBox" layoutX="291.0" layoutY="243.0" prefHeight="25.0" prefWidth="149.0" promptText="Choose Account" AnchorPane.rightAnchor="80.0" />
+        <Label layoutX="82.0" layoutY="282.0" text="Amount :" textFill="#f89100" AnchorPane.leftAnchor="80.0">
+            <font>
+                <Font name="Rockwell Nova Light" size="17.0" />
+            </font>
+        </Label>
+        <TextField fx:id="amountTxF" layoutX="291.0" layoutY="282.0" prefHeight="25.0" prefWidth="149.0" promptText="Amount Movement" />
+        <Button fx:id="cancelMovementBtn" mnemonicParsing="false" onAction="#handleCancelMovementBtn" style="-fx-background-color: #f89100;" text="Cancel" textFill="WHITE" AnchorPane.bottomAnchor="51.0" AnchorPane.leftAnchor="150.0">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </Button>
+        <Button mnemonicParsing="false" onAction="#handleAddMovementBtn" prefHeight="31.0" prefWidth="64.0" style="-fx-background-color: #f89100;" text="Add" textFill="WHITE" AnchorPane.bottomAnchor="51.0" AnchorPane.leftAnchor="306.0" AnchorPane.rightAnchor="150.0">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </Button>
+        <Label fx:id="errorMovementLbl" alignment="CENTER" prefHeight="17.0" prefWidth="235.0" text="Errore descrizione(Max 20)" textFill="#ff1313" visible="false" AnchorPane.bottomAnchor="28.0" AnchorPane.rightAnchor="65.0" />
+    </AnchorPane>
+</AnchorPane>

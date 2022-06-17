@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="AccountTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2020-06-20T20:34:12" hostname="LAPTOP-AH3620KH" time="0.038">
+  <properties/>
+  <testcase name="testAddMovement()" classname="AccountTest" time="0.033"/>
+  <testcase name="testEqualsAccount()" classname="AccountTest" time="0.002"/>
+  <testcase name="testAccountAddCreditsDebits()" classname="AccountTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

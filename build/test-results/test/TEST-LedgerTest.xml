@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="LedgerTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2020-06-20T20:34:13" hostname="LAPTOP-AH3620KH" time="0.005">
+  <properties/>
+  <testcase name="testLedgerTags()" classname="LedgerTest" time="0.002"/>
+  <testcase name="testLedger()" classname="LedgerTest" time="0.003"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
